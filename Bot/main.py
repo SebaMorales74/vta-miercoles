@@ -2,6 +2,13 @@ import discord
 from discord.ext import commands
 import datetime
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+token = os.getenv('DISCORD_TOKEN')
+
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -40,4 +47,7 @@ async def enter(ctx):
     global vc
     vc = await connected.channel.connect()
 
-client.run('MTEzNjQxODI4NzE0MDQ4MzIwMw.GKiyQo.HOFIBeI0BXTFDOkLl_cich6VBHuC0S1c9yNEQY')
+try:
+    client.run(token) # type: ignore
+except:
+    print("Error al iniciar sesión. Asegurate de que el token sea correcto.")
