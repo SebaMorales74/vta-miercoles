@@ -2,7 +2,7 @@ from TikTokLive import TikTokLiveClient
 from TikTokLive.types.events import ConnectEvent, CommentEvent, GiftEvent, ShareEvent, LikeEvent, FollowEvent, ViewerUpdateEvent
 
 try:
-    client: TikTokLiveClient = TikTokLiveClient(unique_id='carojuly18')
+    client: TikTokLiveClient = TikTokLiveClient(unique_id='abuelita_juliana')
 except Exception as e:
     print(f'❌ Hubo un error al conectarse con TikTok: {e}')
 
